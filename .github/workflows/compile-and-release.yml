@@ -107,7 +107,7 @@ jobs:
   draft:
     name: Draft Github Release
     needs: [checkversion, compile]
-    if: needs.checkversion.outputs.dobuild == 1
+    if: needs.checkversion.outputs.dobuild == 0
     runs-on: ubuntu-latest
     steps:
       - name: Download Compilation Artifacts
