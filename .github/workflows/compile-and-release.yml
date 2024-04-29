@@ -61,7 +61,7 @@ jobs:
   compile:
     name: 'Compile'
     needs: [checkversion]
-    if: needs.checkversion.outputs.dobuild == 1
+    if: needs.checkversion.outputs.dobuild == 0
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
