@@ -20,7 +20,7 @@ jobs:
       dobuild: ${{ steps.dobuild.outputs.dobuild }}
 
     steps:
-      - name: Checkout crowbartools/firebot
+      - name: Checkout HydAu/firebot
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -97,7 +97,7 @@ jobs:
       - name: Decrypt Secrets.gpg
         env:
           PASSKEY_FOR_FIREBOT_SECRETS: ${{ secrets.PASSKEY_FOR_FIREBOT_SECRETS }}
-        run: grunt secrets:decrypt
+        
 
       - name: Build for Platform
         run: grunt build
