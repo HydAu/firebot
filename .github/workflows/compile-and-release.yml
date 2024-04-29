@@ -1,6 +1,6 @@
 name: Build and Draft Release
 
-# Only runs
+# Only runs1
 # - after PRs have been merged into master
 # - when a user specifically requests the workflow to run on a branch
 on:
