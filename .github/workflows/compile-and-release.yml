@@ -93,10 +93,6 @@ jobs:
 
       - name: Install Project Dependencies
         run: npm install
-
-      - name: Decrypt Secrets.gpg
-        env:
-          PASSKEY_FOR_FIREBOT_SECRETS: ${{ secrets.PASSKEY_FOR_FIREBOT_SECRETS }}
         
 
       - name: Build for Platform
